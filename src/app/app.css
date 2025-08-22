@@ -1,0 +1,86 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+    margin: 0;
+    padding: 30px;
+    color: #333;
+}
+
+
+h1 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+div > div > div {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+div > div > div:hover {
+    transform: scale(1.02);
+}
+
+
+label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    color: #374151;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 14px;
+}
+
+
+button {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+}
+
+
+div:has(> div:contains("No Data")) {
+    font-style: italic;
+    color: #9ca3af;
+    text-align: center;
+    padding: 20px;
+}
+
+
+@media (min-width: 600px) {
+    input[type="text"],
+    input[type="number"] {
+        max-width: 400px;
+    }
+}

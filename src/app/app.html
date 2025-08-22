@@ -1,0 +1,64 @@
+<div>
+    <h1>
+        Get All Cards
+    </h1>
+
+    <button (click)="loadCarts()">
+        List Carts
+    </button>
+
+</div>
+<div>
+    @if(carts.length>0)
+    {
+        @for(item of carts ; track $index){
+            <div> Product Name: {{item.productName}}</div>
+            <div> QTY: {{item.qty}}</div>
+            <div>Price: {{item.price}}</div>
+            <div>
+                <button (click)="updateCart(item)">
+                    update
+                </button>
+            </div>
+            <div>
+                <button (click)="onDelete(item)">
+                    delete
+                </button>
+            </div>
+        }
+
+    }
+    @else {
+        <div>
+            No Data
+        </div>
+    }
+</div>
+
+<div>
+
+    <h1> Add to Cart </h1>
+
+    <div>
+
+        <label> productName</label>
+        <input type="text" [(ngModel)]="pName"/>
+
+        <label>Price</label>
+        <input type="number" [(ngModel)]="Price"/>
+
+        <label>QTY</label>
+        <input type="number" [(ngModel)]="qty">
+    </div>
+    <div>
+        <button (click)="addCarts()">
+            add cart
+        </button>
+    </div>
+
+    <div>
+        <button (click)="onUpdateCarts()">
+             updateCart
+        </button>
+    </div>
+</div>
